@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 String getBaseUrl() {
-  return 'https://cocoryapp.shop';
+  return 'https://cocory.shop';
 }
 final dio = Dio(
   BaseOptions(
