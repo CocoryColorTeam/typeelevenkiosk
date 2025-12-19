@@ -12,13 +12,13 @@ String getBaseUrl() {
   }
 
   if (defaultTargetPlatform == TargetPlatform.android) {
-    return 'https://cocory.shop';
+    return 'https://cocoryapp.shop';
   } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-    return 'https://cocory.shop';
+    return 'https://cocoryapp.shop';
   } else if (defaultTargetPlatform == TargetPlatform.windows) {
-    return 'https://cocory.shop';
+    return 'https://cocoryapp.shop';
   } else {
-    return 'https://cocory.shop';
+    return 'https://cocoryapp.shop';
   }
 }
 final dio = Dio(
