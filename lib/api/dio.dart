@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 String getBaseUrl() {
   if (kIsWeb) {
     // ✅ Spring static에서 서비스될 경우
-    return '';
+    return 'https://cocoryapp.shop';
     // → same-origin (https://cocory.shop)
   }
 
