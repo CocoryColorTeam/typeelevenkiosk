@@ -2,24 +2,8 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
-
-
 String getBaseUrl() {
-  if (kIsWeb) {
-    // ✅ Spring static에서 서비스될 경우
-    return 'https://cocoryapp.shop';
-    // → same-origin (https://cocory.shop)
-  }
-
-  if (defaultTargetPlatform == TargetPlatform.android) {
-    return 'https://cocoryapp.shop';
-  } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-    return 'https://cocoryapp.shop';
-  } else if (defaultTargetPlatform == TargetPlatform.windows) {
-    return 'https://cocoryapp.shop';
-  } else {
-    return 'https://cocoryapp.shop';
-  }
+  return 'https://cocoryapp.shop';
 }
 final dio = Dio(
   BaseOptions(
@@ -32,6 +16,7 @@ final dio = Dio(
 
 // ✅ 요청 / 응답 / 에러 로그 찍기
 void initDio() {
+  dio.options.baseUrl = getBaseUrl();
   dio.interceptors.add(
     InterceptorsWrapper(
       onRequest: (options, handler) {
@@ -39,7 +24,7 @@ void initDio() {
         return handler.next(options);
       },
       onResponse: (response, handler) {
-        print('[DIO RESPONSE] ${response.statusCode} ${response.data}');
+        print('[DIO RESPONSE] ${response.statusCode}');
         return handler.next(response);
       },
       onError: (e, handler) {
