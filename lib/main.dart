@@ -70,10 +70,10 @@ class _MyAppState extends State<MyApp> {
               SizedBox(height: CocorySize.height(49)),
               FirstComponent(),
               SizedBox(height: CocorySize.height(55)),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: CocorySize.width(68)),
-                child: SecondComponent(),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.symmetric(horizontal: CocorySize.width(68)),
+              //   child: SecondComponent(),
+              // ),
               SizedBox(height: CocorySize.height(55)),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: CocorySize.width(68)),
