@@ -130,7 +130,7 @@ class _ThirdComponentState extends State<ThirdComponent> {
                                   width: CocorySize.width(270),
                                   child: Center(
                                     child: Text(
-                                      '${e.people} ${e.people == 1 ? 'person' : 'people'}',
+                                      '${e.count} ${e.count == 1 ? 'person' : 'people'}',
                                       style: TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: CocorySize.width(60),

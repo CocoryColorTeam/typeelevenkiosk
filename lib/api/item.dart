@@ -1,13 +1,13 @@
 class Item {
   final String time;
   final String name;
-  final int people;
+  final int count;
   final String room;
 
   Item({
     required this.time,
     required this.name,
-    required this.people,
+    required this.count,
     required this.room,
   });
 
@@ -15,8 +15,7 @@ class Item {
     return Item(
       time: json['time'] ?? '',
       name: json['name'] ?? '',
-      // people: json['people'] ?? 1,
-      people: int.tryParse(json['people']?.toString() ?? '') ?? 1,
+      count: int.tryParse(json['count']?.toString() ?? '') ?? 1,
       room: json['room'] ?? '',
     );
   }
