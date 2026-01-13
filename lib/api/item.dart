@@ -15,7 +15,8 @@ class Item {
     return Item(
       time: json['time'] ?? '',
       name: json['name'] ?? '',
-      people: json['people'] ?? 1,
+      // people: json['people'] ?? 1,
+      people: int.tryParse(json['people']?.toString() ?? '') ?? 1,
       room: json['room'] ?? '',
     );
   }
